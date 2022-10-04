@@ -268,6 +268,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor
 
 PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
+    libmtkperf_client
+
+PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
     vendor.mediatek.hardware.mtkpower@1.1.vendor \
     vendor.mediatek.hardware.mtkpower@1.2.vendor
@@ -355,6 +359,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
+    hardware/mediatek/libmtkperf_client \
     hardware/xiaomi
 
 # Thermal
