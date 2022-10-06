@@ -1,3 +1,6 @@
+# Graphics
+type sysfs_mali, fs_type, sysfs_type;
+
 # Latency
 type latency_device, dev_type;
 
