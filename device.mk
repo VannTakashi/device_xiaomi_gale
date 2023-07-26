@@ -325,6 +325,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlayGale \
     SettingsResOverlayGale \
     FrameworksResOverlayGale \
     TetheringResOverlayGale \
