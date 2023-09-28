@@ -116,6 +116,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor 
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-MT6768
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/dt2w/dt2w_event:$(TARGET_COPY_OUT_VENDOR)/bin/dt2w_event
+
+# FM Radio
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 

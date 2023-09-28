@@ -39,3 +39,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                     u:object_r:hal_sensors_default_exec:s0
 /dev/elliptic[0-1]                                                                                     u:object_r:sensor_device:s0
 
+# DT2W Script
+/vendor/bin/dt2w_event                                                                                          u:object_r:dt2w_event_exec:s0
+

@@ -986,3 +986,9 @@ service boot_log /system/bin/logcat -b all -D -f /metadata/boot_log.txt
 
 on boot
     start boot_log
+
+on property:persist.sys.MT6768.dt2w=0
+    exec - system input -- /vendor/bin/dt2w_event 4
+
+on property:persist.sys.MT6768.dt2w=1
+    exec - system input -- /vendor/bin/dt2w_event 5
