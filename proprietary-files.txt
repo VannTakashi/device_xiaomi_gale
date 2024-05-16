@@ -803,6 +803,7 @@ vendor/firmware/Conf_MultipleTest.ini
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/lib/liboemcrypto.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
@@ -810,6 +811,19 @@ vendor/lib64/libwvhidl.so
 vendor/lib64/libwvkeyboxext.so
 vendor/lib64/libwvkeybox.so
 vendor/lib64/mediadrm/libwvdrmengine.so
+
+# EngineerMode
+system_ext/app/EngineerMode/EngineerMode.apk
+system_ext/lib/libem_aoltest_jni.so
+system_ext/lib/libem_audio_jni.so
+system_ext/lib/libem_bleoffload_jni.so
+system_ext/lib/libem_support_jni.so
+system_ext/lib/libem_wifi_jni.so
+system_ext/lib64/libem_aoltest_jni.so
+system_ext/lib64/libem_audio_jni.so
+system_ext/lib64/libem_bleoffload_jni.so
+system_ext/lib64/libem_support_jni.so
+system_ext/lib64/libem_wifi_jni.so
 
 # Fingerprint
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
