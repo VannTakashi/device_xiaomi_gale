@@ -41,9 +41,6 @@ allow hal_power_default sysfs_fpsgo:dir r_dir_perms;
 allow hal_power_default sysfs_fpsgo:file rw_file_perms;
 
 # To do powerhint on nodes defined in powerhint.json
-allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
-allow hal_power_default cgroup:dir search;
-allow hal_power_default cgroup:file rw_file_perms;
 allow hal_power_default proc_cpufreq:dir search;
 allow hal_power_default proc_cpufreq:file rw_file_perms;
 allow hal_power_default sysfs_gpu:dir search;
@@ -73,3 +70,5 @@ allow hal_power_default priv_app:process setsched;
 
 # To get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)
+allow hal_power_default vendor_sysfs_gpu:dir search;
+allow hal_power_default vendor_sysfs_gpu:file rw_file_perms;
