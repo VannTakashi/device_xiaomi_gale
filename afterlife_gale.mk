@@ -8,13 +8,18 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Maintainer
+AFTERLIFE_MAINTAINER := wulan17
+
+TARGET_USES_AOSP_RECOVERY := true
+
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/gale/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_gale
+PRODUCT_NAME := afterlife_gale
 PRODUCT_DEVICE := gale
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
