@@ -1,6 +1,2 @@
 on boot
-    # Xiaomi touch
-    chown system system /dev/xiaomi-touch
-    chmod 0660 /dev/xiaomi-touch
-
     stop console
