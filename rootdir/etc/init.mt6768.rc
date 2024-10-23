@@ -174,6 +174,9 @@ on post-fs-data
     mkdir /data/vendor/secure_element 0777  secure_element secure_element
     chmod 0660 /dev/p73
     chown secure_element secure_element /dev/p73
+    chmod 0660 /dev/tms_ese
+    chown secure_element secure_element /dev/tms_ese
+
 
     # boot time fs tune
     write /sys/block/mmcblk0/queue/iostats 0
