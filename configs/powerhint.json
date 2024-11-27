@@ -80,6 +80,7 @@
       "Name": "SchedBoost",
       "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/sched_boost",
       "Values": [
+        "0",
         "1",
         "2",
         "6"
@@ -259,6 +260,12 @@
       "Node": "SchedBoost",
       "Duration": 0,
       "Value": "6"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "SchedBoost",
+      "Duration": 0,
+      "Value": "0"
     }
   ],
   "AdpfConfig": [
