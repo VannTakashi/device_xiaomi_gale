@@ -333,7 +333,7 @@ PRODUCT_PACKAGES += \
     WifiResOverlayGale
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-halcyon
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -362,7 +362,7 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/halcyon/interfaces/power-libperfmgr \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
