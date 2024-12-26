@@ -1,0 +1,18 @@
+# Latency
+type latency_device, dev_type;
+
+# Performance
+type sysfs_mtk_cpufreq, fs_type, sysfs_type;
+type sysfs_mtk_gpufreq, fs_type, sysfs_type;
+
+# PPS
+type pps_socket, file_type;
+
+# Camera
+type vendor_camera_data_file, data_file_type, file_type;
+type camera_persist_file, file_type;
+
+# Fingerprint
+type vendor_fingerprint_data_file, data_file_type, file_type;
+type silead_fpd_data_file, data_file_type, file_type;
+type sysfs_fingerprint, fs_type, sysfs_type;

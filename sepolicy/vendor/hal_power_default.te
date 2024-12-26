@@ -1,0 +1,73 @@
+typeattribute hal_power_default mlstrustedsubject;
+
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default cgroup:file r_file_perms;
+
+# Rule for hal_power_default to access graphics composer process
+unix_socket_connect(hal_power_default, pps, hal_graphics_composer_default);
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
+
+# Set scheduling info for system_server (for adpf)
+allow hal_power_default system_server:process setsched;
+
+# Set CPU frequency
+allow hal_power_default sysfs_mtk_cpufreq:file rw_file_perms;
+
+# Set GPU frequency
+allow hal_power_default sysfs_mtk_gpufreq:file rw_file_perms;
+
+# Set perfmgr nodes
+allow hal_power_default proc_perfmgr:dir r_dir_perms;
+allow hal_power_default proc_perfmgr:file rw_file_perms;
+allow hal_power_default sysfs_fpsgo:file w_file_perms;
+allow hal_power_default proc_ppm:dir r_dir_perms;
+allow hal_power_default proc_ppm:file rw_file_perms;
+allow hal_power_default proc_cpufreq:dir r_dir_perms;
+allow hal_power_default proc_cpufreq:file rw_file_perms;
+allow hal_power_default proc_hps:dir r_dir_perms;
+allow hal_power_default proc_hps:file rw_file_perms;
+allow hal_power_default proc_cm_mgr:dir r_dir_perms;
+allow hal_power_default proc_cm_mgr:file rw_file_perms;
+allow hal_power_default proc_fliperfs:dir r_dir_perms;
+allow hal_power_default proc_fliperfs:file rw_file_perms;
+allow hal_power_default sysfs_fbt_cpu:dir r_dir_perms;
+allow hal_power_default sysfs_fbt_cpu:file rw_file_perms;
+allow hal_power_default sysfs_fbt_fteh:dir r_dir_perms;
+allow hal_power_default sysfs_fbt_fteh:file rw_file_perms;
+allow hal_power_default sysfs_fpsgo:dir r_dir_perms;
+allow hal_power_default sysfs_fpsgo:file rw_file_perms;
+
+# To do powerhint on nodes defined in powerhint.json
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default cgroup:dir search;
+allow hal_power_default cgroup:file rw_file_perms;
+allow hal_power_default proc_cpufreq:dir search;
+allow hal_power_default proc_cpufreq:file rw_file_perms;
+allow hal_power_default sysfs_gpu:dir search;
+allow hal_power_default sysfs_gpu:file rw_file_perms;
+allow hal_power_default input_device:dir r_dir_perms;
+allow hal_power_default input_device:chr_file rw_file_perms;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
+
+# Set scheduling info for surfaceflinger (for adpf)
+allow hal_power_default surfaceflinger:process setsched;
+
+# Set scheduling info for HWC (for adpf)
+allow hal_power_default hal_graphics_composer_default:process setsched;
+
+# Set scheduling info for system_server (for adpf)
+allow hal_power_default system_server:process setsched;
+
+# Set scheduling info for platform_app/untrusted_app/priv_app
+allow hal_power_default platform_app:process setsched;
+allow hal_power_default untrusted_app:process setsched;
+allow hal_power_default priv_app:process setsched;
+
+# To get/set powerhal state property
+set_prop(hal_power_default, vendor_power_prop)
