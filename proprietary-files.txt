@@ -31,7 +31,6 @@ vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
 vendor/lib/libbwc.so
 vendor/lib/libcvsd_mtk.so
-vendor/lib/libladder.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtkshifter_vendor.so
@@ -670,7 +669,6 @@ vendor/lib/libpq_cust_base.so
 vendor/lib/libpqframework.so
 vendor/lib/libpqparamparser.so
 vendor/lib/libpqpconfig.so
-vendor/lib/libudf.so
 vendor/lib/mt6768/libdpframework.so;SYMLINK=vendor/lib/libdpframework.so
 vendor/lib/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/mt6768/libpq_prot.so;SYMLINK=vendor/lib/libpq_prot.so
@@ -722,13 +720,11 @@ vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libhdrvideo.so
-vendor/lib64/libladder.so
 vendor/lib64/libmml.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libpqparamparser.so
 vendor/lib64/libpqpconfig.so
-vendor/lib64/libudf.so
 vendor/lib64/mt6768/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
 vendor/lib64/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/mt6768/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
@@ -751,6 +747,12 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
+
+# Display (Thread Unwinding) - from gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
+vendor/lib/libladder.so
+vendor/lib/libudf.so
+vendor/lib64/libladder.so
+vendor/lib64/libudf.so
 
 # Display Configs
 vendor/etc/dsi_panel_c3u_35_03_0b_dsc_vdo_mi.xml
