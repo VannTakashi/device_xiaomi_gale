@@ -282,8 +282,6 @@ vendor/lib64/libheichal.so
 vendor/lib64/libimageio.so
 vendor/lib64/libimageio_plat_drv.so
 vendor/lib64/libimageio_plat_pipe.so
-vendor/lib64/libion_mtk.so
-vendor/lib64/libion_ulit.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/liblpcnr.so
@@ -662,8 +660,6 @@ vendor/lib/libgralloc_extra.so
 vendor/lib/libgralloc_metadata.so
 vendor/lib/libgralloctypes_mtk.so
 vendor/lib/libhdrvideo.so
-vendor/lib/libion_mtk.so
-vendor/lib/libion_ulit.so
 vendor/lib/libmml.so
 vendor/lib/libpq_cust_base.so
 vendor/lib/libpqframework.so
@@ -834,6 +830,12 @@ vendor/lib64/libDR.so
 vendor/lib64/libmnl.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
+
+# ION from gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
+vendor/lib/libion_mtk.so
+vendor/lib/libion_ulit.so
+vendor/lib64/libion_mtk.so
+vendor/lib64/libion_ulit.so
 
 # Keymaster
 vendor/bin/bp_kmsetkey_ca
