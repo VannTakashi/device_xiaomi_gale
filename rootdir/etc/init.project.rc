@@ -1,0 +1,98 @@
+# MTK project .rc configure
+
+on early-init
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules trace_mmstat.ko
+
+# C3T code for HQ-218877 by zoujiarong at 2022.08.12 start
+import /vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
+# C3T code for HQ-218877 by zoujiarong at 2022.8.12 end
+
+on init
+    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
+    mkdir /storage/usbotg 0700 root root
+
+on post-fs-data
+# Fingerprint
+    mkdir /data/vendor/silead 0770 system system
+    mkdir /data/vendor/fpc 0777 system system
+    mkdir /data/vendor/goodix 0777 system system
+
+#Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
+    chmod 0660 /dev/MAINAF2
+    chown system camera /dev/MAINAF2
+
+    chmod 0660 /dev/SUBAF
+    chown system camera /dev/SUBAF
+
+    chmod 0660 /dev/GAF001AF
+    chown system camera /dev/GAF001AF
+
+    chmod 0660 /dev/DW9714AF
+    chown system camera /dev/DW9714AF
+
+    chmod 0660 /dev/LC898212AF
+    chown system camera /dev/LC898212AF
+
+    chmod 0660 /dev/BU64745GWZAF
+    chown system camera /dev/BU64745GWZAF
+
+#SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+# start mmstat
+on property:sys.boot_completed=1
+    write /proc/sys/vm/watermark_scale_factor 60
+
+# Fingerprint
+on boot
+    chown system system /dev/silead_fp
+    chmod 0660 /dev/silead_fp
+    chown system system /dev/silead_stub
+    chmod 0660 /dev/silead_stub
+    chmod 0644 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+    chown system system /sys/devices/platform/11012000.spi2/spi_master/spi2/spi2.0/irq
+    chown system system /sys/devices/platform/11012000.spi2/spi_master/spi2/spi2.0/wakeup_enable
+    chown system system /sys/devices/platform/11012000.spi2/spi_master/spi2/spi2.0/fingerdown_wait
+    chown system system /sys/devices/platform/11012000.spi2/spi_master/spi2/spi2.0/modalias
+    chown system system /sys/devices/platform/11012000.spi2/spi_master/spi2/spi2.0/clk_enable
+    chown system system /sys/devices/platform/11012000.spi2/spi_master/spi2/spi2.0/authen_fd/performance
+    chmod 0200 /sys/devices/platform/11012000.spi2/spi_master/spi2/spi2.0/fingerdown_wait
+
+    # Touch panel
+    chmod 0664 /dev/input/event2
+    chown system system /dev/input/event2
+
+    stop console
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    class hal
+    user nfc
+    group nfc
+    disabled
+    override
+
+on post-fs && property:ro.boot.hwname=gust
+    start vendor.nfc_hal_service
