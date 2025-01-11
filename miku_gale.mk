@@ -11,14 +11,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/gale/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common MikuUI stuff.
+$(call inherit-product, vendor/miku/build/product/miku_product.mk
 
-PRODUCT_NAME := lineage_gale
+PRODUCT_NAME := miku_gale
 PRODUCT_DEVICE := gale
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23106RN0DA
+
+#Miku Flags
+MIKU_GAPPS := false
+MIKU_MASTER := VannTakashii ヴァンタカシ
+
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
