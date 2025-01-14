@@ -12,7 +12,7 @@
     "target_path": "hardware/xiaomi"
   },
   {
-    "repository": "android_kerne_xiaomi_gale",
+    "repository": "android_kernel_xiaomi_gale",
     "target_path": "kernel/xiaomi/gale"
   },
   {
