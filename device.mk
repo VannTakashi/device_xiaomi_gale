@@ -334,7 +334,8 @@ PRODUCT_PACKAGES += \
     WifiResOverlayGale
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-tenx
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
