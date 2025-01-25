@@ -39,7 +39,10 @@ vendor/lib/libnxp_extamp_intf.so
 vendor/lib/librt_extamp_intf.so
 vendor/lib/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib/libspeechparser_vendor.so
+vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
+vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
+vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 
 # Audio Configs
 vendor/etc/audio_param/AudioParamOptions.xml
@@ -783,7 +786,7 @@ vendor/lib64/hw/fingerprint.silead.default.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libmifpext.so
-vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/com.fingerprints.extension@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libgoodixhwfingerprint.so;DISABLE_CHECKELF
 vendor/lib64/libsl_fp_impl.so
 
