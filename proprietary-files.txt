@@ -759,6 +759,7 @@ vendor/etc/dsi_panel_c3u_42_0f_0d_dsc_vdo_mi.xml
 vendor/etc/dsi_panel_c3u_46_0f_0c_dsc_vdo_mi.xml
 
 # Display firmware
+vendor/firmware/omnivision_hdl_firmware.img
 vendor/firmware/mt6631_fm_v1_coeff.bin
 vendor/firmware/mt6631_fm_v1_patch.bin
 vendor/firmware/ovt_tcm_cap_limits.csv
