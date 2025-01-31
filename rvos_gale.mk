@@ -12,9 +12,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/gale/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/rvos/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_gale
+# RvOS Flags
+RVOS_MAINTAINER := VannTakashii
+RVOS_BUILD_TYPE := Official
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Boot Animation Resolution
+TARGET_BOOT_ANIMATION_RES := 720
+
+PRODUCT_NAME := rvos_gale
 PRODUCT_DEVICE := gale
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
