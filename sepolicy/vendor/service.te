@@ -1,0 +1,1 @@
+type netdagent_service, service_manager_type, hal_service_type;
