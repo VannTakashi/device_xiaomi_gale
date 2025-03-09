@@ -242,3 +242,8 @@ ro.vendor.wlan.gen=gen4m
 # QS Stuffs
 debug.renderengine.backend=skiaglthreaded
 debug.hwui.skia_atrace_enabled=false
+
+# Ram Tweaks (for devices usings 4GB)
+persist.sys.purgeable_assets=1
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
