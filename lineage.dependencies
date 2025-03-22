@@ -13,7 +13,8 @@
   },
   {
     "repository": "android_kernel_xiaomi_gale",
-    "target_path": "kernel/xiaomi/gale"
+    "target_path": "kernel/xiaomi/gale",
+    "branch": "lineage-21"
   },
   {
     "repository": "proprietary_vendor_xiaomi_gale",
