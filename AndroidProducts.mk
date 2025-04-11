@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/afterlife_gale.mk
+    $(LOCAL_DIR)/lineage_gale.mk
 
 COMMON_LUNCH_CHOICES := \
-    afterlife_gale-user \
-    afterlife_gale-userdebug \
-    afterlife_gale-eng
+    lineage_gale-user \
+    lineage_gale-userdebug \
+    lineage_gale-eng
