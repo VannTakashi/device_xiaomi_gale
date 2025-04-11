@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_gale.mk
+    $(LOCAL_DIR)/infinity_gale.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_gale-user \
-    lineage_gale-userdebug \
-    lineage_gale-eng
+    infinity_gale-user \
+    infinity_gale-userdebug \
+    infinity_gale-eng
