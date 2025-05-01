@@ -17,8 +17,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 PRODUCT_PACKAGES += \
-    com.android.hardware.boot \
-    android.hardware.boot-service.default_recovery
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -116,8 +117,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    android.hardware.drm@1.4.vendor 
 
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -215,8 +215,7 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.2.vendor \
     libavservices_minijail.vendor \
     libsfplugin_ccodec_utils.vendor \
-    libcodec2_soft_common.vendor \
-    libstagefright_foundation-v33
+    libcodec2_soft_common.vendor 
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -378,9 +377,7 @@ PRODUCT_COPY_FILES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
-
+    android.hardware.usb@1.1-service.mt6768
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -390,8 +387,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \
-    libwifi-hal-wrapper \
-    android.hardware.wifi-service
+    android.hardware.wifi-service \
+    android.hardware.wifi@1.0-service-lazy-mt6768
 
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \

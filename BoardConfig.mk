@@ -8,6 +8,7 @@ DEVICE_PATH := device/xiaomi/gale
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_DUP_RULES := true
+ALLOW_MISSING_DEPENDENCIES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -96,6 +97,7 @@ TARGET_KERNEL_CONFIG := gale_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/gale
 TARGET_KERNEL_NO_GCC := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r487747c
 
 # NFC
 ODM_MANIFEST_SKUS += \
