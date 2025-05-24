@@ -386,7 +386,7 @@ PRODUCT_PACKAGES += \
     hostapd 
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy.mt6768
+    android.hardware.wifi@1.0-service-lazy
 
 PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
