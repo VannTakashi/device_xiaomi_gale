@@ -1,3 +1,6 @@
+# Clone ViperFX
+git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
+
 # Clone KernelTree
 https://github.com/VannTakashi/kernel_xiaomi_gale kernel/xiaomi/gale
 
