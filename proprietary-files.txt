@@ -823,6 +823,7 @@ vendor/lib64/libmifpext.so
 vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libsl_fp_impl.so
+vendor/odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so:vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 
 # Fuelgauge
 vendor/bin/fuelgauged
