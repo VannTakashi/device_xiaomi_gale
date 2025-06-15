@@ -374,8 +374,8 @@ PRODUCT_COPY_FILES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
+    android.hardware.usb@1.3.vendor \
+    android.hardware.usb.gadget@1.1.vendor
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -384,9 +384,7 @@ PRODUCT_PACKAGES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     wpa_supplicant \
-    hostapd 
-
-PRODUCT_PACKAGES += \
+    hostapd \
     android.hardware.wifi@1.0-service-lazy
 
 PRODUCT_PACKAGES += \
