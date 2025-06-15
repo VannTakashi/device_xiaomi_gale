@@ -1210,3 +1210,8 @@ vendor/bin/wlan_assistant
 vendor/etc/init/wlan_assistant.rc
 vendor/firmware/WIFI_RAM_CODE_soc1_0_1a_1.bin
 vendor/firmware/wifi.cfg
+
+# USB 
+vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
+vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
+-vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
