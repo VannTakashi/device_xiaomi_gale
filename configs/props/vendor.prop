@@ -115,7 +115,7 @@ ro.hardware.gatekeeper=beanpod
 ro.vendor.mtk_log_hide_gps=1
 
 # HWUI
-ro.hwui.render_ahead=2
+ro.hwui.render_ahead=20
 debug.hwui.use_hint_manager=true
 
 # Keymaster
@@ -239,3 +239,6 @@ ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m
 
+# QS Stuffs
+debug.renderengine.backend=skiaglthreaded
+debug.hwui.skia_atrace_enabled=false
