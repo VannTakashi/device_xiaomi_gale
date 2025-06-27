@@ -12,13 +12,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/gale/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/scandium/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_gale
+PRODUCT_NAME := scandium_gale
 PRODUCT_DEVICE := gale
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23106RN0DA
+TARGET_BOOT_ANIMATION_RES := 720
+SCANDIUM_MAINTAINER := VannTakashii.
+SCANDIUM_BUILD_GAPPS := true
+SCANDIUM_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
