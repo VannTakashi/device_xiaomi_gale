@@ -191,6 +191,8 @@ vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
 vendor/lib64/android.hardware.power@1.0.so
+vendor/lib64/android.hardware.power@1.1.so
+vendor/lib64/android.hardware.power@1.2.so
 vendor/lib64/lc_algoutils.so
 vendor/lib64/lib3a.ae.core.so
 vendor/lib64/lib3a.ae.so
