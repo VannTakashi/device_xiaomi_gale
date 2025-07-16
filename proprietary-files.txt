@@ -820,6 +820,7 @@ vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/hw/fingerprint.silead.default.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libmifpext.so
