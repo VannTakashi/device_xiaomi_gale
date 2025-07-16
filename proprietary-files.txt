@@ -1148,6 +1148,7 @@ vendor/bin/volte_clientapi_ua
 vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
 vendor/bin/volte_rcs_ua
+vendor/bin/volte_stack
 vendor/bin/ipsec_mon
 vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
