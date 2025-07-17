@@ -4,7 +4,7 @@ mkdir clang-r487747c ; cd clang-r487747c ; wget https://android.googlesource.com
 cd ../../../../..
 
 # Clone KernelTree
-https://github.com/VannTakashi/kernel_xiaomi_gale kernel/xiaomi/gale
+git clone https://github.com/VannTakashi/kernel_xiaomi_gale kernel/xiaomi/gale
 
 # Clone Vendor tree
 git clone https://github.com/VannTakashi/vendor_xiaomi_gale.git -b dev/lineage-20 vendor/xiaomi/gale
