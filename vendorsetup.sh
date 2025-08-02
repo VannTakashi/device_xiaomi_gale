@@ -1,8 +1,3 @@
-# Add Clang For Compile Kernel
-cd prebuilts/clang/host/linux-x86
-mkdir clang-r487747c ; cd clang-r487747c ; wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android14-release/clang-r487747c.tar.gz ; tar -xf * && ls
-cd ../../../../..
-
 # Clone KernelTree
 git clone https://github.com/VannTakashi/kernel_xiaomi_gale kernel/xiaomi/gale
 

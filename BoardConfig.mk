@@ -98,7 +98,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/gale
 TARGET_KERNEL_NO_GCC := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r487747c
 
 # NFC
 ODM_MANIFEST_SKUS += \
