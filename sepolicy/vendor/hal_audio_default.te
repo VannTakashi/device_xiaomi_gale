@@ -1,1 +1,2 @@
 allow hal_audio_default persist_data_file:dir search;
+allow hal_audio_default hal_power_hwservice:hwservice_manager find;

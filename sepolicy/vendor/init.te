@@ -1,0 +1,4 @@
+allow init default_android_hwservice:hwservice_manager find;
+allow init default_android_service:service_manager find;
+allow init mtk_hal_videotelephony_hwservice:hwservice_manager find;
+allow init vtservice_service:service_manager add;
