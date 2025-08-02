@@ -23,6 +23,7 @@ cc_library_shared {
     compile_multilib: "64",
     shared_libs: [
         "libaudioclient",
+        "libstagefright",
     ],
     header_libs: [
         "libaudioclient_headers",

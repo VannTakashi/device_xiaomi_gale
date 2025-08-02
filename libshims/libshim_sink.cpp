@@ -5,6 +5,7 @@
  */
 
 #include <media/AudioTrack.h>
+#include <media/stagefright/MediaMuxer.h>
 
 using namespace android;
 
@@ -39,4 +40,11 @@ void _ZN7android10AudioTrackC1E19audio_stream_type_tj14audio_format_t20audio_cha
       attributionSource, pAttributes, doNotReconnect, maxRequiredSpeed,
       selectedDeviceId);
 }
+
+void _ZN7android10MediaMuxer6createEiNS_14MediaMuxerBase12OutputFormatE(void* thisptr, int fd, android::MediaMuxer::OutputFormat format);
+
+void _ZN7android10MediaMuxer6createEiNS_14MediaMuxerBase12OutputFormatE(void* thisptr, int fd, android::MediaMuxer::OutputFormat format) {
+        _ZN7android10MediaMuxer6createEiNS_14MediaMuxerBase12OutputFormatE(thisptr, fd, format);
+}
+
 }
