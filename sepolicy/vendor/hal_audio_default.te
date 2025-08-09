@@ -1,1 +1,4 @@
 allow hal_audio_default persist_data_file:dir search;
+allow hal_audio_default sysfs_batteryinfo:file { open read };
+allow hal_audio_default sysfs_batteryinfo:dir search;
+allow hal_audio_default ccci_aud_device:chr_file { ioctl map open read write };
