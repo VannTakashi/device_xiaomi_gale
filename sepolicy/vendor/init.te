@@ -1,0 +1,4 @@
+allow init ccci_device:chr_file { ioctl open read write };
+allow init mtk_hal_videotelephony_hwservice:hwservice_manager find;
+allow init vtservice_hidl:binder call;
+allow init vtservice_hidl:fd use;
