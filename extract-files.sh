@@ -55,7 +55,7 @@ fi
 
 function blob_fixup {
     case "$1" in
-        system_ext/lib64/libsink.so)
+        system/lib64/libsink.so)
             "${PATCHELF}" --add-needed "libshim_sink.so" "$2"
             ;;
         vendor/bin/hw/android.hardware.gnss-service.mediatek |\
@@ -81,7 +81,7 @@ function blob_fixup {
             "${PATCHELF}" --add-needed "libstagefright_foundation.so" "$2"
             "${PATCHELF}" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
             ;;
-        system_ext/lib64/libsource.so)
+        system/lib64/libsource.so)
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
         vendor/lib64/libmtkcam_stdutils.so|\
